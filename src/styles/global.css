@@ -1,19 +1,89 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 :root {
-	font-family: system-ui, sans-serif;
-	color: #17211b;
-	background: #f7faf6;
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
+  --kibo-color-canvas: #f7faf6;
+  --kibo-color-surface: #ffffff;
+  --kibo-color-surface-muted: #edf4ed;
+  --kibo-color-ink: #17211b;
+  --kibo-color-ink-muted: #637068;
+  --kibo-color-accent: #78a889;
+  --kibo-color-accent-strong: #4f8061;
+  --kibo-color-border: #dce8dd;
+  --kibo-radius-sm: 0.5rem;
+  --kibo-radius-md: 0.875rem;
+  --kibo-radius-lg: 1.5rem;
+  --kibo-radius-pill: 999px;
+  --kibo-content-width: 72rem;
+  --kibo-page-gutter: 1.25rem;
+  --kibo-section-space: 5rem;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--kibo-color-ink);
+  background: var(--kibo-color-canvas);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+@theme inline {
+  --color-canvas: var(--kibo-color-canvas);
+  --color-surface: var(--kibo-color-surface);
+  --color-surface-muted: var(--kibo-color-surface-muted);
+  --color-ink: var(--kibo-color-ink);
+  --color-ink-muted: var(--kibo-color-ink-muted);
+  --color-accent: var(--kibo-color-accent);
+  --color-accent-strong: var(--kibo-color-accent-strong);
+  --color-border: var(--kibo-color-border);
+  --radius-sm: var(--kibo-radius-sm);
+  --radius-md: var(--kibo-radius-md);
+  --radius-lg: var(--kibo-radius-lg);
+  --radius-pill: var(--kibo-radius-pill);
 }
 
 html {
-	min-width: 320px;
+  min-width: 320px;
+  background: var(--kibo-color-canvas);
 }
 
 body {
-	margin: 0;
-	min-width: 320px;
-	min-height: 100vh;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.site-container {
+  width: min(100% - (var(--kibo-page-gutter) * 2), var(--kibo-content-width));
+  margin-inline: auto;
+}
+
+.section-space {
+  padding-block: var(--kibo-section-space);
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --kibo-page-gutter: 2rem;
+    --kibo-section-space: 7rem;
+  }
 }
