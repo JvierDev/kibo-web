@@ -1,0 +1,153 @@
+<section class="hero" aria-labelledby="hero-title">
+	<div class="site-container hero-grid">
+		<div class="hero-copy">
+			<p class="eyebrow">Desktop wellness companion</p>
+			<h1 id="hero-title">Your little reminder<br />to take care of yourself.</h1>
+			<p class="hero-description">
+				Kibo is a friendly desktop companion that reminds you to hydrate, stretch and take
+				healthy breaks while you work.
+			</p>
+			<div class="hero-actions">
+				<a class="primary-action" href="#download">Download Kibo</a>
+				<a class="secondary-action" href="https://github.com/JvierDev/kibo">View GitHub</a>
+			</div>
+		</div>
+
+		<div class="mascot-stage" aria-label="Kibo 3D mascot placeholder" role="img">
+			<div class="stage-label">3D Kibo</div>
+			<div class="stage-placeholder">Mascot coming soon</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		padding-block: 4rem 5rem;
+	}
+
+	.hero-grid {
+		display: grid;
+		gap: 3rem;
+	}
+
+	.hero-copy {
+		max-width: 38rem;
+		align-self: center;
+	}
+
+	.eyebrow {
+		margin: 0 0 1.25rem;
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		line-height: 1.3;
+		text-transform: uppercase;
+		color: var(--kibo-color-accent-strong);
+	}
+
+	h1 {
+		max-width: 11ch;
+		margin: 0;
+		font-size: clamp(2.75rem, 12vw, 5.5rem);
+		font-weight: 650;
+		letter-spacing: -0.055em;
+		line-height: 0.98;
+	}
+
+	.hero-description {
+		max-width: 30rem;
+		margin: 1.75rem 0 0;
+		font-size: 1.0625rem;
+		line-height: 1.7;
+		color: var(--kibo-color-ink-muted);
+	}
+
+	.hero-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 2rem;
+	}
+
+	.primary-action,
+	.secondary-action {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 2.875rem;
+		padding: 0.75rem 1.1rem;
+		border-radius: var(--kibo-radius-pill);
+		font-size: 0.9375rem;
+		font-weight: 650;
+		text-decoration: none;
+		transition: background-color 160ms ease, border-color 160ms ease;
+	}
+
+	.primary-action {
+		border: 1px solid var(--kibo-color-accent-strong);
+		color: var(--kibo-color-surface);
+		background: var(--kibo-color-accent-strong);
+	}
+
+	.primary-action:hover {
+		border-color: var(--kibo-color-ink);
+		background: var(--kibo-color-ink);
+	}
+
+	.secondary-action {
+		border: 1px solid var(--kibo-color-border);
+		color: var(--kibo-color-ink);
+		background: var(--kibo-color-surface);
+	}
+
+	.secondary-action:hover {
+		border-color: var(--kibo-color-accent);
+		background: var(--kibo-color-surface-muted);
+	}
+
+	.mascot-stage {
+		display: grid;
+		place-items: center;
+		min-height: 20rem;
+		padding: 2rem;
+		border: 1px dashed var(--kibo-color-border);
+		border-radius: var(--kibo-radius-lg);
+		color: var(--kibo-color-ink-muted);
+		background: var(--kibo-color-surface-muted);
+		text-align: center;
+	}
+
+	.stage-label {
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--kibo-color-accent-strong);
+	}
+
+	.stage-placeholder {
+		font-size: 0.9375rem;
+	}
+
+	.primary-action:focus-visible,
+	.secondary-action:focus-visible {
+		outline: 2px solid var(--kibo-color-accent-strong);
+		outline-offset: 4px;
+	}
+
+	@media (min-width: 48rem) {
+		.hero {
+			padding-block: 7rem 8rem;
+		}
+
+		.hero-grid {
+			grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.9fr);
+			align-items: center;
+			gap: 5rem;
+		}
+
+		.mascot-stage {
+			min-height: 32rem;
+		}
+	}
+</style>
