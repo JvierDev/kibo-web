@@ -1,0 +1,72 @@
+---
+import FeatureCard from '../ui/FeatureCard.astro';
+---
+
+<section id="features" class="features section-space" aria-labelledby="features-title">
+	<div class="site-container">
+		<div class="section-heading">
+			<p class="eyebrow">A little care, built in</p>
+			<h2 id="features-title">Small reminders.<br />Better workdays.</h2>
+		</div>
+
+		<div class="feature-grid">
+			<FeatureCard
+				icon="water"
+				title="Hydrate"
+				description="Stay hydrated throughout your workday with gentle reminders."
+			/>
+			<FeatureCard
+				icon="stretch"
+				title="Stretch"
+				description="Take a moment to move and release tension."
+			/>
+			<FeatureCard
+				icon="break"
+				title="Take a break"
+				description="Step away from the screen and give your eyes and mind a rest."
+			/>
+		</div>
+	</div>
+</section>
+
+<style>
+	.features {
+		background: var(--kibo-color-surface-muted);
+	}
+
+	.section-heading {
+		max-width: 34rem;
+	}
+
+	.eyebrow {
+		margin: 0 0 1rem;
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		line-height: 1.3;
+		text-transform: uppercase;
+		color: var(--kibo-color-accent-strong);
+	}
+
+	h2 {
+		margin: 0;
+		font-size: clamp(2.25rem, 8vw, 4.5rem);
+		font-weight: 650;
+		letter-spacing: -0.055em;
+		line-height: 1;
+	}
+
+	.feature-grid {
+		display: grid;
+		gap: 1rem;
+		margin-top: 3rem;
+	}
+
+	@media (min-width: 48rem) {
+		.feature-grid {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 1.25rem;
+			margin-top: 5rem;
+		}
+	}
+</style>

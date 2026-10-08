@@ -1,0 +1,58 @@
+---
+import { Coffee, Droplets, PersonStanding } from '@lucide/astro';
+
+interface Props {
+	icon: 'water' | 'stretch' | 'break';
+	title: string;
+	description: string;
+}
+
+const { icon, title, description } = Astro.props;
+---
+
+<article class="feature-card">
+	<div class="feature-icon" aria-hidden="true">
+		{icon === 'water' && (
+			<Droplets size={22} stroke-width={1.5} />
+		)}
+		{icon === 'stretch' && (
+			<PersonStanding size={22} stroke-width={1.5} />
+		)}
+		{icon === 'break' && (
+			<Coffee size={22} stroke-width={1.5} />
+		)}
+	</div>
+	<h3>{title}</h3>
+	<p>{description}</p>
+</article>
+
+<style>
+	.feature-card {
+		padding: 1.5rem;
+		border: 1px solid var(--kibo-color-border);
+		border-radius: var(--kibo-radius-md);
+		background: var(--kibo-color-surface);
+	}
+
+	.feature-icon {
+		display: grid;
+		place-items: center;
+		width: 2.75rem;
+		height: 2.75rem;
+		margin-bottom: 2.5rem;
+		border-radius: var(--kibo-radius-sm);
+		color: var(--kibo-color-accent-strong);
+		background: var(--kibo-color-surface-muted);
+	}
+
+	h3 {
+		margin: 0;
+		font-size: 1.2rem;
+		letter-spacing: -0.02em;
+	}
+
+p {
+		margin: 0.75rem 0 0;
+		color: var(--kibo-color-ink-muted);
+	}
+</style>
