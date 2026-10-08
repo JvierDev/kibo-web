@@ -1,0 +1,68 @@
+---
+import { Bell, Download, Laptop, SlidersHorizontal } from '@lucide/astro';
+
+interface Props {
+	icon: 'download' | 'settings' | 'laptop' | 'bell';
+	number: string;
+	title: string;
+	description: string;
+}
+
+const { icon, number, title, description } = Astro.props;
+---
+
+<article class="process-step">
+	<div class="step-topline">
+		<div class="step-icon" aria-hidden="true">
+			{icon === 'download' && <Download size={20} stroke-width={1.6} />}
+			{icon === 'settings' && <SlidersHorizontal size={20} stroke-width={1.6} />}
+			{icon === 'laptop' && <Laptop size={20} stroke-width={1.6} />}
+			{icon === 'bell' && <Bell size={20} stroke-width={1.6} />}
+		</div>
+		<span class="step-number">{number}</span>
+	</div>
+	<h3>{title}</h3>
+	<p>{description}</p>
+</article>
+
+<style>
+	.process-step {
+		position: relative;
+	}
+
+	.step-topline {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 2rem;
+	}
+
+	.step-icon {
+		display: grid;
+		place-items: center;
+		width: 2.75rem;
+		height: 2.75rem;
+		border: 1px solid var(--kibo-color-border);
+		border-radius: var(--kibo-radius-sm);
+		color: var(--kibo-color-accent-strong);
+		background: var(--kibo-color-surface-muted);
+	}
+
+	.step-number {
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		color: var(--kibo-color-ink-muted);
+	}
+
+	h3 {
+		margin: 0;
+		font-size: 1.1rem;
+		letter-spacing: -0.02em;
+	}
+
+p {
+		margin: 0.75rem 0 0;
+		color: var(--kibo-color-ink-muted);
+	}
+</style>
