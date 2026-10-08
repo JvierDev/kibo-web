@@ -1,5 +1,5 @@
 ---
-import KiboCanvas from '../kibo/KiboCanvas';
+import Kibo3D from '../kibo/Kibo3D';
 ---
 
 <section class="hero" aria-labelledby="hero-title">
@@ -20,7 +20,7 @@ import KiboCanvas from '../kibo/KiboCanvas';
 		<div class="mascot-stage" aria-label="Kibo 3D mascot placeholder" role="img">
       <div class="stage-status"><span aria-hidden="true"></span> 3D mascot preview</div>
 			<div class="canvas-wrap" aria-hidden="true">
-				<KiboCanvas client:visible />
+        <Kibo3D animation="idle" client:visible />
 			</div>
 			<div class="stage-label">3D Kibo</div>
       <div class="stage-placeholder">Meet Kibo</div>
