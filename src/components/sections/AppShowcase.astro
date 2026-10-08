@@ -1,0 +1,106 @@
+---
+---
+
+<section id="showcase" class="showcase section-space" aria-labelledby="showcase-title">
+	<div class="site-container showcase-grid">
+		<div class="showcase-copy">
+			<p class="eyebrow">The desktop companion</p>
+			<h2 id="showcase-title">A small presence<br />on your desktop.</h2>
+			<p>
+				Kibo stays close while you work, offering gentle reminders without getting in the way.
+			</p>
+		</div>
+
+		<div class="screenshot-frame" role="img" aria-label="Kibo desktop application screenshot">
+			<div class="window-bar" aria-hidden="true">
+				<span></span><span></span><span></span>
+			</div>
+			<img
+				class="screenshot-image"
+				src="/images/kibo-app-showcase.png"
+				alt="Kibo desktop application showing wellness reminders for water, stretching, and walking"
+				width="1283"
+				height="906"
+				loading="lazy"
+				decoding="async"
+			/>
+		</div>
+	</div>
+</section>
+
+<style>
+	.showcase {
+		background: var(--kibo-color-surface-muted);
+	}
+
+	.showcase-grid {
+		display: grid;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.showcase-copy {
+		max-width: 30rem;
+	}
+
+	.eyebrow {
+		margin: 0 0 1rem;
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		line-height: 1.3;
+		text-transform: uppercase;
+		color: var(--kibo-color-accent-strong);
+	}
+
+	h2 {
+		margin: 0;
+		font-size: clamp(2.25rem, 8vw, 4.5rem);
+		font-weight: 650;
+		letter-spacing: -0.055em;
+		line-height: 1;
+	}
+
+	.showcase-copy > p:last-child {
+		max-width: 26rem;
+		margin: 1.5rem 0 0;
+		line-height: 1.7;
+		color: var(--kibo-color-ink-muted);
+	}
+
+	.screenshot-frame {
+		overflow: hidden;
+		border: 1px solid var(--kibo-color-border);
+		border-radius: var(--kibo-radius-lg);
+		background: var(--kibo-color-surface);
+		box-shadow: 0 1.5rem 4rem rgb(23 33 27 / 6%);
+	}
+
+	.window-bar {
+		display: flex;
+		gap: 0.4rem;
+		padding: 1rem 1.25rem;
+		border-bottom: 1px solid var(--kibo-color-border);
+	}
+
+	.window-bar span {
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 50%;
+		background: var(--kibo-color-border);
+	}
+
+	.screenshot-image {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	@media (min-width: 48rem) {
+		.showcase-grid {
+			grid-template-columns: minmax(16rem, 0.75fr) minmax(28rem, 1.25fr);
+			gap: 5rem;
+		}
+
+	}
+</style>
